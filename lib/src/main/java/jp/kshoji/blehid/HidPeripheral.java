@@ -595,11 +595,11 @@ public abstract class HidPeripheral {
 
                                     Log.d(TAG, "BluetoothDevice.ACTION_PAIRING_REQUEST");
 
-                                    try {
+                                    /*try {
                                         device.setPairingConfirmation(true);
                                     } catch (final SecurityException e) {
                                         Log.d(TAG, e.getMessage(), e);
-                                    }
+                                    }*/
                                 }
                             }
                         }, filter);
@@ -867,13 +867,13 @@ public abstract class HidPeripheral {
 
             if (ACTION_PAIRING_REQUEST.equals(action)) {
                 Log.d(TAG, "BluetoothDevice.ACTION_PAIRING_REQUEST");
-                try {
+               /* try {
                     device.setPairingConfirmation(true);
                 } catch (final SecurityException e) {
                     Log.d(TAG, e.getMessage(), e);
                 }
                 boolean ret = device.createBond();
-                Log.d(TAG, "createBond ret = "+ret);
+                Log.d(TAG, "createBond ret = "+ret);*/
             }
         }
     };
