@@ -583,7 +583,7 @@ public abstract class HidPeripheral {
 
                                 if (ACTION_BOND_STATE_CHANGED.equals(action)) {
                                     final int state = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, BluetoothDevice.ERROR);
-
+                                    Log.d(TAG, "bond state changed @@@@@@@: " + state);
                                     if (state == BluetoothDevice.BOND_BONDED) {
                                         Log.d(TAG, "successfully bonded");
                                         context.unregisterReceiver(this);
@@ -613,14 +613,14 @@ public abstract class HidPeripheral {
                         device.createBond();*/
                     }
 
-                    handler.post(new Runnable() {
+                    /*handler.post(new Runnable() {
                         @Override
                         public void run() {
                             if (gattServer != null) {
                                 gattServer.connect(device, false);
                             }
                         }
-                    });
+                    });*/
 
                     synchronized (bluetoothDevicesMap) {
                         bluetoothDevicesMap.put(device.getAddress(), device);
@@ -859,7 +859,7 @@ public abstract class HidPeripheral {
 
             if (ACTION_BOND_STATE_CHANGED.equals(action)) {
                 final int state = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, BluetoothDevice.ERROR);
-
+                Log.d(TAG, "bond state changed ##### : " + state);
                 if (state == BluetoothDevice.BOND_BONDED) {
                     Log.d(TAG, "successfully bonded");
                 }
