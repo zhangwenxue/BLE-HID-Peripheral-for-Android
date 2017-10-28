@@ -24,7 +24,7 @@ local.properties
 proguard/
 
 # Log Files
-*.log
+# *.log
 
 # Android Studio Navigation editor temp files
 .navigation/
@@ -41,3 +41,5 @@ captures/
 /.idea/
 .idea/
 log/btsnoop_hci/
+!/log/171028/btsnoop_hci_last.log
+!/log/171028/btsnoop_hci.log
